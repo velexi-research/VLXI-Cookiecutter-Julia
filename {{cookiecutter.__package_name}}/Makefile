@@ -13,7 +13,7 @@ export JULIA_PROJECT = @.
 
 .PHONY: test fast-test
 
-## Run all tests
+## Run all tests.
 test:
 	@echo Removing old coverage files
 	find . -name "*.jl.*.cov" -exec rm -f {} \;
@@ -24,7 +24,7 @@ test:
 	@echo Generating code coverage report
 	@jlcoverage
 
-## Run tests in fail-fast mode (i.e., stop at first failure)
+## Run tests in fail-fast mode (i.e., stop at first failure).
 fast-test: export JLTEST_FAIL_FAST=true
 fast-test: test
 
@@ -32,7 +32,7 @@ fast-test: test
 
 .PHONY: codestyle
 
-## Check codestyle
+## Check codestyle.
 codestyle:
 	@echo Checking code style
 	@jlcodestyle -v $(PKG_DIR)
@@ -86,7 +86,7 @@ spotless: clean
 
 .PHONY: help
 
-## Display this list of available rules
+## Display this list of available rules.
 help:
 	@echo "$$(tput bold)Default rule:$$(tput sgr0) ${.DEFAULT_GOAL}"
 	@echo
