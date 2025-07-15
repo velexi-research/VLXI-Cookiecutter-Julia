@@ -5,8 +5,8 @@ Velexi Julia Package Cookiecutter Release Notes
 0.5.6 (2024-??-??)
 ==================
 ### Cookiecutter Template
-* Update "Julia Packaging Guide" quick reference.
 * Update Python package dependencies.
+* Polish Makefile.
 
 ### Cookiecutter Development
 * Update Python package dependencies.
