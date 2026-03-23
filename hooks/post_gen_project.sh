@@ -22,15 +22,15 @@
 # --- License files
 
 # license = Apache License: remove NOTICE file
-if [[ "{{ cookiecutter.license }}" != "ASL" ]]; then
+if [[ "{{ cookiecutter.license }}" != "Apache-2.0" ]]; then
     rm NOTICE
 fi
 
 # license = Business Source License
-if [[ "{{ cookiecutter.license }}" == "BSL" ]]; then
-    mv LICENSE-BSL LICENSE
+if [[ "{{ cookiecutter.license }}" == "Business Source License 1.1" ]]; then
+    mv LICENSE-BSL-1.1 LICENSE
 else
-    rm LICENSE-BSL
+    rm LICENSE-BSL-1.1
 fi
 
 # license = None: force LICENSE file to be an empty file

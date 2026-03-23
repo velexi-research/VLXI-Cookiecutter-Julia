@@ -29,13 +29,22 @@ fi
 
 # --- Create Julia package directory
 
-# Set plugins parameters
-if [ "{{ cookiecutter.license }}" != "None" ] && [ "{{ cookiecutter.license }}" != "BSL" ]; then
-    LICENSE='License(; name="{{ cookiecutter.license }}"),'
+# License
+if [[ "{{ cookiecutter.license }}" == "Apache-2.0" ]]; then
+    LICENSE='License(; name="ASL"),'
+elif [[ "{{ cookiecutter.license }}" == "BSD 3-Clause" ]]; then
+    LICENSE='License(; name="BSD3"),'
+elif [[ "{{ cookiecutter.license }}" == "Business Source License 1.1" ]]; then
+    LICENSE=""
+elif [[ "{{ cookiecutter.license }}" == "MIT" ]]; then
+    LICENSE='License(; name="MIT"),'
+elif [[ "{{ cookiecutter.license }}" == "Mozilla Public License 2.0" ]]; then
+    LICENSE='License(; name="MPL-2.0"),'
 else
     LICENSE=""
 fi
 
+# TagBot parameters
 if [[ "{{ cookiecutter.tagbot_use_gpg_signing }}" == "yes" ]]; then
     TAG_BOT='TagBot(; gpg=Secret("GPG_KEY"), gpg_password=Secret("GPG_PASSWORD")),'
 fi
