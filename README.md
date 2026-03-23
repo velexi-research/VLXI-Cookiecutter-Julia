@@ -206,30 +206,28 @@ Table of Contents
 
 5. Finish setting up the new Julia package.
 
-   * Verify the license information.
+   * Verify the accuracy of the license files.
 
-     * __Apache License 2.0__. Verify the copyright year and owner in the copyright
-       (located in the `NOTICE` file).
+     * __Apache License 2.0__. Check the copyright year and owner in the copyright located
+       in the `NOTICE` file.
 
-     * __Business Source License 1.1__. Verify the following fields in the `LICENSE` file.
+     * __BSD License__. Check the copyright year and owner in the copyright notice located
+       in the `LICENSE` file.
+
+     * __Business Source License 1.1__. Check the following fields in the `LICENSE` file.
 
        * _Licensor_: owner of the package
-
        * _Licensed Work_: name of package, copyright date, copyright owner
-
        * _Additional Use Grant_: any additional right granted to licensees
-
        * _Change Date_: the date that work will be relicensed under "Change License".
          "Change Date" must be at most four years from release date
-
        * _Change License_: the open-source license that work is to be relicensed under at
          the "Change Date". "Change License" must be a license compatible with GPL version
          2.0 or later.
-
        * _Contact_: email address to inquire about alternative licensing arrangements
 
-     * __Other Licenses__. Verify the copyright year and owner in the copyright notice
-       (located in the `LICENSE` file).
+     * __MIT License__. Check the copyright year and owner in the copyright notice located
+       in the `LICENSE` file.
 
    * Verify the URLs in `docs/make.jl`, the Julia documentation build script.
 
