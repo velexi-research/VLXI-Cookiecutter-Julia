@@ -2,6 +2,16 @@ Velexi Julia Package Cookiecutter Release Notes
 ===============================================
 
 --------------------------------------------------------------------------------------------
+0.5.7 (2026-03-23)
+==================
+### Cookiecutter Template
+* Add support for Mozilla Public License 2.0 and Business Source License 1.1.
+* Bump default Julia version to 1.10.
+
+### Cookiecutter Development
+* Update README.
+
+--------------------------------------------------------------------------------------------
 0.5.6 (2026-03-22)
 ==================
 ### Cookiecutter Template

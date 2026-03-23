@@ -19,24 +19,35 @@
 # Cookiecutter post-generation script
 #------------------------------------------------------------------------------
 
-# --- Update package template files based on user configuration
+# --- License files
 
-# Remove NOTICE file if license is not Apache License 2.0
-if [[ "{{ cookiecutter.license }}" != "ASL" ]]; then
+# license = Apache License: remove NOTICE file
+if [[ "{{ cookiecutter.license }}" != "Apache-2.0" ]]; then
     rm NOTICE
 fi
 
-# Force LICENSE file to be an empty file if an empty license is selected
+# license = Business Source License
+if [[ "{{ cookiecutter.license }}" == "Business Source License 1.1" ]]; then
+    mv LICENSE-BSL-1.1 LICENSE
+else
+    rm LICENSE-BSL-1.1
+fi
+
+# license = None: force LICENSE file to be an empty file
 if [[ "{{ cookiecutter.license }}" == "None" ]]; then
     rm LICENSE
     touch LICENSE
 fi
+
+# --- GitHub Actions files
 
 # Replace default dependabot.yml
 mv dot-github-dependabot.yml .github/dependabot.yml
 
 # Replace default GitHub Actions workflows
 mv dot-github-workflows-CI.yml .github/workflows/CI.yml
+
+# --- Update basic package files
 
 # Replace default README.md
 mv README-template.md README.md

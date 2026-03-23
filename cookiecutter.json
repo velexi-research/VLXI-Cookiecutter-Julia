@@ -4,10 +4,11 @@
   "author": "Your Name",
   "email": "{{ cookiecutter.author | slugify(separator='.') }}@example.com",
   "license": [
-    "ASL",
-    "BSD3",
+    "Apache-2.0",
+    "BSD 3-Clause",
+    "Business Source License 1.1",
     "MIT",
-    "MPL-2.0",
+    "Mozilla Public License 2.0",
     "None"
   ],
   "julia_version": "1.10",
