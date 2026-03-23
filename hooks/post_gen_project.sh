@@ -32,6 +32,9 @@ if [[ "{{ cookiecutter.license }}" == "None" ]]; then
     touch LICENSE
 fi
 
+# Replace default dependabot.yml
+mv dot-github-dependabot.yml .github/dependabot.yml
+
 # Replace default GitHub Actions workflows
 mv dot-github-workflows-CI.yml .github/workflows/CI.yml
 
