@@ -2,13 +2,16 @@ Velexi Julia Package Cookiecutter Release Notes
 ===============================================
 
 --------------------------------------------------------------------------------------------
-0.5.6 (2024-??-??)
+0.5.6 (2026-03-??)
 ==================
 ### Cookiecutter Template
 * Update Python package dependencies.
+* Migrate to GitHub dependabot (instead of CompatHelper GitHub Action).
 * Polish Makefile.
+* Polish dot-envrc file.
 
 ### Cookiecutter Development
+* Polish dot-envrc file.
 * Update Python package dependencies.
 
 --------------------------------------------------------------------------------------------
