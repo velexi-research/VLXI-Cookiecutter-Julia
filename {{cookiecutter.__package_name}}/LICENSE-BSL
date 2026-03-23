@@ -3,9 +3,9 @@ License text copyright (c) 2023 MariaDB plc, All Rights Reserved.
 
 Parameters
 
-Licensor:             LICENSOR
-Licensed Work:        LICENSED_WORK
-                      The Licensed Work is (c) YYYY LICENSOR
+Licensor:             {{ cookiecutter.author }}
+Licensed Work:        {{ cookiecutter.package_name }}
+                      The Licensed Work is (c) {% now 'utc', '%Y' %} {{ cookiecutter.author }}
 Additional Use Grant: None
 
 Change Date:          Four years from the release date of the Licensed Work
