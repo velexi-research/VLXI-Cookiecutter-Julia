@@ -10,7 +10,7 @@
     "MPL-2.0",
     "None"
   ],
-  "julia_version": "1.7",
+  "julia_version": "1.10",
   "github_repo_owner": "{{ cookiecutter.author | slugify }}",
   "enable_github_pages": [
     "yes",
