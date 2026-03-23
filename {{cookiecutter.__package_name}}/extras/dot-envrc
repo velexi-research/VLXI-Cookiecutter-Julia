@@ -14,7 +14,7 @@ PATH_EXTRA=
 
 # --- Preparations
 
-# Find project root directory.
+# Project root directory
 #
 # Note: "builtin cd" is used to avoid conflicts with other packages (e.g., autoenv)
 PROJECT_ROOT_DIR=`builtin cd $(dirname "${BASH_SOURCE[0]}") && pwd`

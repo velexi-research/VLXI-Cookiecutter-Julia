@@ -13,7 +13,7 @@ export JULIA_PROJECT = @.
 
 .PHONY: test fast-test
 
-## Run all tests
+## Run all tests.
 test:
 	@echo Removing old coverage files
 	find . -name "*.jl.*.cov" -exec rm -f {} \;
@@ -24,7 +24,7 @@ test:
 	@echo Generating code coverage report
 	@jlcoverage
 
-## Run tests in fail-fast mode (i.e., stop at first failure)
+## Run tests in fail-fast mode (i.e., stop at first failure).
 fast-test: export JLTEST_FAIL_FAST=true
 fast-test: test
 
@@ -32,7 +32,7 @@ fast-test: test
 
 .PHONY: codestyle
 
-## Check codestyle
+## Check codestyle.
 codestyle:
 	@echo Checking code style
 	@jlcodestyle -v $(PKG_DIR)
@@ -48,13 +48,22 @@ docs:
 
 # --- Utility rules
 
-.PHONY: clean spotless
+.PHONY: clean-coverage clean spotless
+
+## Remove automatically generated coverage files.
+clean-coverage:
+	@echo Removing coverage files
+	find . -name "*.jl.*.cov" -exec rm -f {} \;  # Julia coverage
+	find . -name "*.coverage.*" -exec rm -f {} \;  # Python coverage
+	rm -rf coverage htmlcov coverage.xml  # Python coverage
 
 ## Remove files and directories automatically generated during development and testing
-## (e.g., coverage files).
-clean:
-	@echo Removing coverage files
-	find . -name "*.jl.*.cov" -exec rm -f {} \;
+## (e.g., compiled python code).
+clean: clean-coverage
+	@echo Removing compiled code
+	find . -type d -name "__pycache__" -delete  # compiled python
+	find . -type f -name "*.py[co]" -delete  # compiled python
+	rm -rf .cache .pytest_cache  # pytest
 
 ## Remove all automatically generated files and directories (e.g., coverage files, package
 ## documentation, and `Manifest.toml` files).
@@ -86,7 +95,7 @@ spotless: clean
 
 .PHONY: help
 
-## Display this list of available rules
+## Display this list of available rules.
 help:
 	@echo "$$(tput bold)Default rule:$$(tput sgr0) ${.DEFAULT_GOAL}"
 	@echo

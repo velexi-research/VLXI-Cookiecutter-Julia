@@ -230,7 +230,9 @@ The following steps register a new package with the General registry.
 
 * Prepare the package for the initial release.
 
-  * Set the initial package version in `Project.toml`.
+  * Set the initial package version in `Project.toml` and add an initial entry in `NEWS.md`.
+
+  * Merge all repository updates into the `main` branch.
 
   * Check that the package meets the [automatic merging guidelines][auto-merge-guidelines].
 
@@ -306,6 +308,8 @@ See the [Package Registration][#3] section for details.
         * For non-breaking features or bug-fixes, increment the patch number.
 
   * Update `NEWS.md`.
+
+  * Merge all repository updates into the `main` branch.
 
 * Release the new package version in the General registry.
 
