@@ -50,7 +50,7 @@ docs:
 
 .PHONY: clean-coverage clean spotless
 
-## Remove automatically generated coverage files
+## Remove automatically generated coverage files.
 clean-coverage:
 	@echo Removing coverage files
 	find . -name "*.jl.*.cov" -exec rm -f {} \;  # Julia coverage
