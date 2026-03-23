@@ -30,7 +30,7 @@ fi
 # --- Create Julia package directory
 
 # Set plugins parameters
-if [[ "{{ cookiecutter.license }}" != "None" ]]; then
+if [ "{{ cookiecutter.license }}" != "None" ] && [ "{{ cookiecutter.license }}" != "BSL" ]; then
     LICENSE='License(; name="{{ cookiecutter.license }}"),'
 else
     LICENSE=""
